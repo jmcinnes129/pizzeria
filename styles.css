@@ -1,0 +1,653 @@
+/********f************
+    
+    Project 4 Stylesheet
+    Name: Jonathan McInnes
+    Date: December 2023
+    Description: The stylesheet for project 4
+
+********************/
+
+html,
+body,
+section,
+p,
+header,
+nav,
+footer,
+div,
+article,
+aside,
+ol,
+ul,
+li,
+h1,
+h6 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/marbleBackground.jpg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div#container {
+    width: 1500px;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 1px 1px 2px #A2A2A2, -1px -1px 2px #A2A2A2;
+    display: flexbox;
+}
+
+#logo { 
+    width: 80px;
+}
+
+#navTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+#welcome{
+	background: url(images/pizzaBackground.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	
+}
+
+h1{
+    color: red;
+}
+
+h2 {
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+#navMiddle a {
+    box-shadow: inset 0 0 0 0 darkblue;
+    color: darkblue;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+#navMiddle a:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 darkblue;
+}
+
+.button{
+    box-shadow: inset 0 0 0 0 red;
+    color: red;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.button:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 red;
+}
+
+
+.qty{
+    box-shadow: inset 0 0 0 0 #FF3333;
+    color: #FF3333;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.qty:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #FF3333;
+}
+
+.info{
+    box-shadow: inset 0 0 0 0 #FF3333;
+    color: #FF3333;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.info:hover{
+    color: #fff;
+    box-shadow: inset 500px 0 0 0 #FF3333;
+}
+
+#navMiddle a:focus{
+    color: bisque;
+}
+
+#navMiddle{
+    line-height: 30px;
+	background: linear-gradient(red, black);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header #navMiddle ul{
+    list-style: none;
+    display: flex;
+}
+
+#navMiddle ul li::after{
+    padding: 2px;
+    content: '|';
+    color: white;
+    line-height: 20px;
+    text-align: middle;
+}
+
+#navMiddle ul li a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#navMiddle ul li:last-child::after{
+    content: '';
+}
+
+#parent{
+    display: flex;
+    flex-direction: row;
+}
+
+#asideDiv{
+    width: 170px;
+}
+
+#logoDiv hr{
+    margin-top: 90px;
+}
+
+#asideMessage{
+    width: 170px;
+    gap: 5px;
+    margin-top: 10px;
+    padding-top: 5px;
+    color: black;
+}
+
+#asidePhoto{
+    display: flex;   
+}
+
+#asidePhoto2{
+    display: flex;
+}
+
+main{
+    margin-left: 30px;
+}
+
+main hr{
+    background-color: #A2A2A2;
+    
+}
+
+main #sub a{
+    padding: 5px;
+    font-size: small;
+}
+
+#aboutPara{
+    justify-content: center;
+    align-items: center;
+    font-size: 12;
+}
+
+main #details{
+    margin-top: 10px;
+    gap: 5px;
+}
+
+#details ul{
+	margin-top: 20px;
+}
+
+#details ul li{
+   padding:1px 2px;
+   list-style: none;
+   font-weight: bold;
+   
+}
+
+#details ul li a{
+    text-decoration: none;
+    color: blue;
+}
+
+figure{
+    width: 300px;
+    display: inline-block;
+}
+
+#detailsText{
+    line-height: 30px;
+}
+
+#detailsList{
+    line-height: 50px;
+}
+
+.detailsImage{
+    padding: 5px;
+    width: 300px;
+    float: right;
+}
+
+.legalBottom{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.legalBottom p a:hover, :focus{
+	color: red;
+}
+
+footer{
+    margin-top: 70px;
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 0.7em;
+}
+
+footer nav ul li::after{
+    padding: 2px;
+    content: '|';
+    color: black;
+    line-height: 20px;
+    text-align: middle;
+}
+
+footer nav ul li:last-child::after{
+    content: '';
+}
+
+footer nav ul li{ 
+    list-style: none;
+    display: inline-block;
+}
+
+footer nav ul li a{
+    font-weight: normal;
+    text-decoration: none;
+    padding-left: 10px;
+    color: #076a9d;
+}
+
+footer nav ul li a:hover, :focus{
+    color: red;
+}
+
+footer p:last-of-type{
+    color: grey;
+}
+
+footer p a{
+    text-decoration: none;
+    font-weight: normal;
+    margin-left: 5px;
+    color: #076a9d;
+}
+
+footer p:last-of-type a{
+    padding-left: 10px;
+    border-left: 1px solid black;
+}
+
+.blue{
+	color: blue;
+}
+
+.greyed{
+    color: #9fa0a0;
+}
+
+#parent {
+	padding-top: 40px;
+}
+
+dialog#cartError::backdrop {
+	background: linear-gradient(45deg, red, black);
+	opacity: 0.4;
+}
+
+dialog button {
+	display: inline-block;
+	margin: 0px auto;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	box-shadow: 0 0 3px red;
+	background-color: #fff;
+	border-radius: 50vw;
+}
+
+fieldset#orderInfo,
+fieldset#paymentInfo {
+	border-radius: 10px;
+	margin: 15px auto;
+	box-shadow: 2px 2px 4px #ccc, -2px -2px 4px #ccc;
+}
+
+fieldset#cardTypes,
+fieldset#cardInfo {
+	border-radius: 10px;
+}
+
+ul,
+ol {
+	list-style: none;
+	display: inline;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	text-align: center;
+}
+
+#orderInfo h3 {
+	margin-bottom: 0px;
+}
+
+#orderInfo .right {
+	float: right;
+	width: 25%;
+}
+
+#orderInfo .left {
+	float: left;
+	width: 75%;
+}
+
+#products li {
+	border: 1px black solid;
+	border-radius: 5px;
+	padding: 15px;
+	box-sizing: border-box;
+	margin: 5px auto;
+}
+
+#products li p {
+	font-size: 0.8em;
+	display: inline-block;
+	width: 80%;
+	vertical-align: top;
+	float: left;
+}
+
+#products li p img {
+	float: left;
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-left: 15px;
+	width: 80px;
+	height: 80px;
+}
+
+#products li input {
+	width: 20px;
+	display: inline-block;
+	margin-top: 20px;
+	vertical-align: top;
+	text-align: right;
+	color: #333;
+}
+
+#products li button {
+	height: 23px;
+	margin-top: 20px;
+	margin-left: 2px;
+	color: #333;
+}
+
+#products span {
+	margin-top: 10px;
+	display: block;
+	font-size: 1.7em;
+}
+
+#products span,
+#cart span {
+	font-weight: bold;
+	padding-left: 3px;
+}
+
+div.quantityField {
+	float: right;
+	text-align: right;
+	width: 15%;
+}
+
+#cart li {
+	border: 1px black solid;
+	background: #eee;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 15px;
+	margin: 5px 5px;
+}
+
+#cart li img {
+	float: left;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-right: 15px;
+}
+
+#cart li p {
+	font-size: 0.75em;
+	display: block;
+	padding: 2px;
+	vertical-align: top;
+}
+
+#cart li button {
+	height: 23px;
+	color: #333;
+	float: right;
+	margin-top: 8px;
+}
+
+#cart #total {
+	font-size: 1em;
+	background-color: green;
+	color: #fff;
+}
+
+#cart #total p {
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#cart li p.noitems {
+	color: #aaa;
+}
+
+#paymentInfo .left {
+	float: left;
+	width: 50%;
+}
+
+#paymentInfo .right {
+	float: right;
+	width: 50%;
+}
+
+#paymentInfo h3 {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#paymentInfo .left ul li {
+	width: 90%;
+	border-radius: 5px;
+	padding: 8px 10px;
+	box-sizing: border-box;
+	margin: 0px auto;
+}
+
+#paymentInfo .left label {
+	display: inline-block;
+	width: 100px;
+	margin-top: 2px;
+}
+
+#paymentInfo .left input {
+	display: inline-block;
+	width: 50%;
+	height: 26px;
+	padding-left: 5px;
+	font-size: 14px;
+	color: #333;
+}
+
+#paymentInfo .left select {
+	display: inline-block;
+	height: 30px;
+	padding-left: 5px;
+	font-size: 14px;
+	line-height: 26px;
+	padding-top: 3px;
+	color: #333;
+}
+
+#gotoShipping {
+	margin-left: 15px;
+	width: 90%;
+	font-size: 0.8em;
+}
+
+#gotoShipping a:link,
+#gotoShipping a:visited {
+	color: blue;
+}
+
+#gotoShipping a:hover,
+#gotoShipping a:focus {
+	text-decoration: none;
+}
+
+#cardTypes,
+#cardInfo {
+	margin-top: 40px;
+}
+
+/*	Radio button styles */
+
+#cardTypes ol li {
+	padding-top: 10px;
+	text-align: center;
+}
+
+#cardTypes label {
+	background: none no-repeat left 50%;
+	line-height: 20px;
+	padding: 0px 0px 0px 30px;
+	width: auto;
+	margin-right: 15px;
+}
+
+#cardTypes input {
+	margin-left: 25px;
+}
+
+#cardTypes label[for='visa'] {
+	background-image: url('images/visa.gif');
+}
+
+#cardTypes label[for='amex'] {
+	background-image: url('images/amex.gif');
+}
+
+#cardTypes label[for='mastercard'] {
+	background-image: url('images/mastercard.gif');
+}
+
+#cardTypes label:hover {
+	cursor: pointer;
+}
+
+#cardInfo input {
+	display: inline-block;
+	width: 50%;
+	height: 26px;
+	padding-left: 5px;
+	font-size: 14px;
+	color: #333;
+}
+
+#cardInfo select {
+	display: inline-block;
+	height: 30px;
+	padding-left: 5px;
+	font-size: 14px;
+	line-height: 26px;
+	padding-top: 3px;
+	color: #333;
+}
+
+#cardInfo li {
+	width: 90%;
+	padding: 8px 10px;
+	box-sizing: border-box;
+	margin: 0px auto;
+}
+
+#cardInfo label {
+	display: inline-block;
+	width: 120px;
+	margin-top: 2px;
+}
+
+.error {
+	color: red;
+}
+
+.shippingError {
+	margin-left: 110px;
+}
+
+.cardError {
+	margin-left: 130px;
+}
+
+.cardTypeError {
+	margin-left: 30px;
+}
+
+#submit,
+#clear {
+	height: 36px;
+	color: #333;
+	margin-top: 8px;
+	font-size: 16px;
+}
+
+#submit {
+	margin-right: 15px;
+}
+
+#submit:hover,
+#clear:hover {
+	cursor: pointer;
+}

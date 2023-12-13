@@ -1,0 +1,283 @@
+<!--------f-----------
+
+    Project 4
+    Name: Jonathan McInnes
+    Date: December 2023
+    Description: The HTML file for project 4
+
+--------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" >
+		<title>Order</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" >
+		<link rel="shortcut icon" href="#" >
+		<script src="script.js"></script>
+		<script src="utilityFunctions.js"></script>
+	</head>
+	<body>
+        <div id="container">
+            <nav>
+                <div id="navTop">
+                        <h1>
+                            <img src="images/pizzaLogo.png" alt="logo" id="logo">
+                            Pineapple-less Pizzeria!
+                        </h1>                 
+                </div> 
+            </nav>
+    
+            <div id="welcome">  
+            </div>  
+            <header id="header">
+                <section id="navMiddle">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="order.html">Order</a></li>
+                    </ul>
+                </section>
+            </header>
+		<h1>Order Now!</h1>
+		<dialog id="cartError">
+			<h1>Please Add an Item to Your Cart</h1>
+			<button class="button close-button">Close</button>
+		</dialog>
+		<form id="orderform" action="index.html" method="post">
+			<fieldset id="orderInfo">
+				<div class="left">
+					<h3>Order Pizza</h3>
+					<ul id="products">
+						<li>
+							<p>
+								<img src="images/order1.jpg" alt="Quad-za" >The Quad-za is one of our favorite speciality pizzas,
+								each quarter of the pizza is a completely different topping.<span>$24.99</span>
+							</p>
+
+							<div class="quantityField" id="item1">
+								<input
+									id="qty1"
+									name="qty1"
+									class="qty"
+									value=""
+									type="text"
+									placeholder="0"
+									autofocus="autofocus"
+								>
+								<button type="button" id="addQuad" class="button">Add</button>
+							</div>
+
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p>
+								<img src="images/order2.jpg" alt="Spin-eroni" >The Spin-eroni is a Italian class style pizza with both spinich,
+								and pepperoni covered by a layer of thick melted authentic Italian cheese.
+								<span>$22.99</span>
+							</p>
+
+							<div class="quantityField" id="item2">
+								<input
+									id="qty2"
+									name="qty2"
+									class="qty"
+									value=""
+									type="text"
+									placeholder="0"
+								>
+								<button type="button" id="addSpin" class="button">Add</button>
+							</div>
+
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p>
+								<img src="images/order3.jpg" alt="Pickel Pepperoni" >One of our more inventive creations is the Pickel Pepperoni, 
+								a delicious pizza covered in vegetables and pepperoni. <span>$23.99</span>
+							</p>
+
+							<div class="quantityField" id="item3">
+								<input
+									id="qty3"
+									name="qty3"
+									class="qty"
+									value=""
+									type="text"
+									placeholder="0"
+								>
+								<button type="button" id="addPickel" class="button">Add</button>
+							</div>
+
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p>
+								<img src="images/order4.jpg" alt="Eggs-pensive" >A fantastic choice for the adventurous,
+								the brand new Eggs-pensive pizza just might be for you! Get one today. <span>$28.99</span>
+							</p>
+
+							<div class="quantityField" id="item4">
+								<input
+									id="qty4"
+									name="qty4"
+									class="qty"
+									value=""
+									type="text"
+									placeholder="0"
+								>
+								<button type="button" id="addEggs" class="button">Add</button>
+							</div>
+
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p>
+								<img src="images/order5.jpg" alt="Shrimpy" >Gotten tired of typical pizza toppings? 
+								Why not try our celebrated Shrimpy Cheese pizza! It's bursting with flavor and shrimp! <span>$28.99</span>
+							</p>
+
+							<div class="quantityField" id="item5">
+								<input
+									id="qty5"
+									name="qty5"
+									class="qty"
+									value=""
+									type="text"
+									placeholder="0"
+								>
+								<button type="button" id="addShrimpy" class="button">Add</button>
+							</div>
+
+							<div class="clear"></div>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<h3>Cart</h3>
+					<ul id="cart">
+						<li id="noItems">
+							<p class="center noitems">No items in your cart</p>
+						</li>
+						<li id="total">
+							<p>Total Order Amount: <span id="cartTotal">$0.00</span></p>
+
+							<p></p>
+						</li>
+					</ul>
+					<p id="gotoShipping"><a href="#shippinginfo">Enter your shipping and payment information</a></p>
+				</div>
+			</fieldset>
+			<fieldset id="paymentInfo">
+				<div class="left">
+					<a id="shippinginfo"><h3>Order Information</h3></a>
+					<ul>
+						<li>
+							<label for="fullname">Full Name</label>
+							<input id="fullname" name="fullname" class="info" type="text" >
+							<p class="shippingError error" id="fullname_error">* Required field</p>
+						</li>
+						<li>
+							<label for="address">Address</label>
+							<input id="address" name="address" class="info" type="text" >
+							<p class="shippingError error" id="address_error">* Required field</p>
+						</li>
+						<li>
+							<label for="phonenumber">Phone Number</label>
+							<input id="phonenumber" name="phonenumber" class="info" type="number" >
+							<p class="shippingError error" id="phonenumber_error">* Required field</p>
+							<p class="shippingError error" id="invalidnumber_error">
+								* Invalid phone number
+							</p>
+						</li>						
+						<li>
+							<label for="email">Email</label>
+							<input id="email" name="email" class="info" type="text" >
+							<p class="shippingError error" id="email_error">* Required field</p>
+							<p class="shippingError error" id="emailformat_error">
+								* Invalid email address
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<h3>Payment Information</h3>
+					<fieldset id="cardTypes">
+						<legend>Card Type</legend>
+						<ul>
+							<li>
+								<input id="visa" name="cardtype" type="radio" >
+								<label for="visa">VISA</label>
+								<input id="amex" name="cardtype" type="radio" >
+								<label for="amex">AmEx</label>
+								<input id="mastercard" name="cardtype" type="radio" >
+								<label for="mastercard">Mastercard</label>
+								<p class="cardTypeError error" id="cardtype_error">
+									* You must choose a card type
+								</p>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset id="cardInfo">
+						<legend>Card Info</legend>
+						<ul>
+							<li>
+								<label for="cardname">Name on Card</label>
+								<input id="cardname" name="cardname" class="info" type="text" >
+								<p class="cardError error" id="cardname_error">* Required field</p>
+							</li>
+							<li>
+								<label for="month">Expiry Date</label>
+								<select id="month" name="month" class="info">
+									<option value ="0">- Month -</option>
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+									<option value="4">April</option>
+									<option value="5">May</option>
+									<option value="6">June</option>
+									<option value="7">July</option>
+									<option value="8">August</option>
+									<option value="9">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								</select>
+								<select id="year" name="year" class="info"></select>
+								<p class="cardError error" id="month_error">
+									* You must choose a month
+								</p>
+								<p class="cardError error" id="expiry_error">* Invalid expiry date</p>
+							</li>
+							<li>
+								<label for="cardnumber">Card Number</label>
+								<input id="cardnumber" name="cardnumber" class="info" type="number" >
+								<p class="cardError error" id="cardnumber_error">* Required field</p>
+								<p class="cardError error" id="invalidcard_error">
+									* Invalid card number
+								</p>
+							</li>
+						</ul>
+					</fieldset>
+				</div>
+				<div class="clear"></div>
+				<p class="center">
+					<button type="submit" id="submit" class="button">Purchase Items</button>
+					<button type="reset" id="clear" class="button">Clear Order</button>
+				</p>
+			</fieldset>
+		</form>
+        <footer class="legalBottom">
+            <nav class="legalBottom">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <p >Copyright &#169;<a href="index.html">Pineapple-less Pizzeria</a></p>
+            <p class="greyed">333 Lamoureux Road, Ile des Chenes, Manitoba | <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Map</a></p>
+        </footer>
+    </div>
+	</body>
+</html>
